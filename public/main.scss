@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+$bg-color-yellow:#ffb703 ;
+$bg-color-yellow-dark:#ffb703 ;
+$main-color:#023047 ;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;    
+    font-size: 1.6rem;
+}
+
+.logo{
+    & a{
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        & span{
+            color: $bg-color-yellow-dark;
+            font-size: 2rem;
+        }
+    }
+
+    &-img{
+        width: 2rem;
+        height: 2rem;
+        margin: 0.3rem;
+        transition:  all linear;
+        animation: rotate 2s linear infinite;
+    }
+}
+
+.row{
+    margin: 0;
+}
+.main{
+    &_menu{
+        background-color: $main-color;
+    }
+
+    &_header{
+       
+        &_left{
+            height: auto;
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            & h1{
+                font-size: 3rem;
+                text-align: center;
+                color: $main-color;
+                padding: 2rem 0;
+                & span{
+                    color: $bg-color-yellow-dark;
+                }
+            }
+            & p{
+                font-size:1.8rem ;
+            }
+        }
+        &_right{
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+}
+figure img{
+    filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.3));
+}
+.navbar{
+    background-color: $main-color;
+    color: #fff;
+    padding: 2rem 0;
+
+    & a {
+        color: #fff;
+        font-size: 1.8rem;
+    }
+    &-toggler{
+        background-color: $bg-color-yellow-dark;
+    }
+}
+
+
+
+
+
+
+
+
+.footer{
+    position: static;
+    width: 100%;
+    background-color: $main-color;
+    padding: 1rem 0;
+    bottom: 0;
+    left: 0;
+
+    & p{
+        text-align: center;
+        color: #fff;
+        font-size: 1.8rem;
+    }
+}
+.btn{
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    background-color: $main-color;
+    outline: none;
+    border: 0;
+
+    &:hover{
+        background-color: rgba($main-color, 0.9);
+    }
+}
+
+@keyframes rotate{
+    0%{
+      transform: rotate(0deg);  
+    }
+    100%{
+      transform: rotate(360deg);  
+    }
+}
